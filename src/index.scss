@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jost&family=Rubik+Mono+One&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  color: #323232;
+}
+
+// Colors
+$black: #323232;
+$gray: #f3f3f3;
+$black: #323232;
+$gray: #f3f3f3;
+$yellow: #f5cb5c;
+$red: #f95738;
+$white: #f7fff7;
+$green: #a1c181;
+$beige: #fefae0;
+
+//rgb(161, 193, 129)
+$blue: #1a535c;
+$orange: #fe7f2d;
+
+@mixin phone {
+  @media only screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media only screen and (min-width: 769px) and (max-width: 1199px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media only screen and (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin child-container {
+  //border: 1px solid red;
+  margin: 0 auto;
+  width: 90vw;
+
+  @include desktop {
+    width: 80vw;
+  }
+}
+
+// Page header.div
+@mixin page-header {
+  h1 {
+  }
+  @include phone {
+    padding: 150px 0 0;
+    h1 {
+      font-size: 2rem;
+    }
+  }
+
+  @include tablet {
+    padding: 100px 0 0;
+    h1 {
+      font-size: 2.5rem;
+    }
+  }
+
+  @include desktop {
+    padding: 100px 0 0;
+    h1 {
+      font-size: 3vw;
+    }
+  }
+}
+
+@mixin normal-text {
+  font-size: 1rem;
+  line-height: 1.5;
+
+  @include tablet {
+    font-size: 1.25rem;
+  }
+
+  @include desktop {
+    font-size: 1.25vw;
+  }
+}
+
+@mixin big-text {
+  line-height: 1.5;
+
+  @include phone {
+    font-size: 1.5rem;
+  }
+
+  @include tablet {
+    font-size: 2rem;
+  }
+
+  @include desktop {
+    font-size: 2.25vw;
+  }
+  font-family: "Jost", sans-serif;
+}
+
+@mixin heading {
+  font-size: 1.5rem;
+  line-height: 1.5;
+
+  @include tablet {
+    font-size: 1.75rem;
+  }
+
+  @include desktop {
+    font-size: 1.75vw;
+  }
+}
+
+@mixin link {
+  cursor: pointer;
+  &:hover {
+    text-decoration: none;
+    &::after {
+      content: "\2197";
+      font-size: 0.9em;
+      color: $black;
+      position: relative;
+      top: -10px;
+    }
+  }
+}
+
+img {
+  width: 100%;
+}

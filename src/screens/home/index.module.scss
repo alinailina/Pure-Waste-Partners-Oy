@@ -1,0 +1,160 @@
+@import "../../index.scss";
+
+.container {
+  // Hero screen
+  section:first-of-type {
+    height: 80vh;
+    display: flex;
+
+    > div {
+      width: 50%;
+
+      &:first-of-type {
+        background-color: $beige;
+      }
+
+      img {
+        width: 100%;
+        height: 80vh;
+        object-fit: cover;
+      }
+    }
+
+    @include phone {
+      height: auto;
+      flex-direction: column;
+
+      > div {
+        //border: 1px solid;
+        width: 100%;
+        img {
+          margin-top: 80px;
+          margin-bottom: -10px;
+          height: 40vh;
+        }
+      }
+    }
+  }
+
+  // 2
+  section:nth-of-type(2) {
+    height: 80vh;
+    display: flex;
+
+    > div {
+      width: 50%;
+
+      &:last-of-type {
+        background-color: $red;
+      }
+
+      img {
+        width: 100%;
+        height: 80vh;
+        object-fit: cover;
+      }
+    }
+
+    @include phone {
+      flex-direction: column;
+      height: auto;
+      > div {
+        width: 100%;
+
+        img {
+          height: 40vh;
+          margin-bottom: -10px;
+        }
+      }
+    }
+  }
+
+  // 3
+  section:nth-of-type(3) {
+    height: 80vh;
+    display: flex;
+
+    > div {
+      width: 50%;
+
+      &:first-of-type {
+        background-color: $green;
+      }
+
+      > img {
+        width: 100%;
+        height: 80vh;
+        object-fit: cover;
+      }
+    }
+
+    @include phone {
+      height: auto;
+      flex-direction: column;
+
+      > div {
+        //border: 1px solid;
+        width: 100%;
+        img {
+          margin-bottom: -10px;
+          height: 40vh;
+        }
+      }
+    }
+  }
+
+  // Text containers
+  > div {
+    //border: 1px solid;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    p {
+      display: block;
+      width: 80%;
+      @include big-text;
+      color: $red;
+    }
+
+    @include phone {
+      min-height: auto;
+      padding: 100px 0;
+      p {
+        width: 90%;
+      }
+    }
+  }
+
+  // Different color p for 2nd container
+  > div:nth-of-type(2) {
+    p {
+      color: $green;
+    }
+  }
+
+  // Icons
+  .icons {
+    @include child-container;
+    max-width: 45em;
+    padding: 100px 0;
+    //border: 1px solid;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    // Icon container
+    > div {
+      //border: 1px solid;
+      width: 25%;
+
+      margin: 10px;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+@import "../../index.scss";
+
+.container {
+  @include child-container;
+  margin-bottom: 100px;
+  header {
+    @include page-header;
+  }
+}

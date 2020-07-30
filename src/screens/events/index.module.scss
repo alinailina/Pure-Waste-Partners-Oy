@@ -1,0 +1,39 @@
+@import "../../index.scss";
+
+.container {
+  @include child-container;
+  margin-bottom: 100px;
+  @include phone {
+    margin-bottom: 50px;
+  }
+
+  header {
+    @include page-header;
+  }
+
+  ul {
+    padding: 0;
+    list-style: none;
+
+    li {
+      display: flex;
+      flex-direction: column;
+
+      p {
+        @include normal-text;
+        span {
+          display: block;
+          color: $red;
+          margin-bottom: 10px;
+        }
+      }
+
+      a {
+        @include normal-text;
+        @include link;
+        color: $black;
+      }
+      margin-bottom: 25px;
+    }
+  }
+}

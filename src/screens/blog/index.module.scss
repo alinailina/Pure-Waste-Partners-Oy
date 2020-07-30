@@ -1,0 +1,80 @@
+@import "../../index.scss";
+
+.container {
+  @include child-container;
+  margin-bottom: 100px;
+  @include phone {
+    margin-bottom: 50px;
+  }
+
+  // Header
+  header {
+    @include page-header;
+  }
+
+  // Intro text
+  > p {
+    @include normal-text;
+    margin-bottom: 25px;
+  }
+
+  // Articles container
+  > div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .article,
+    i {
+      //border: 1px solid red;
+
+      @include phone {
+        width: 100%;
+        padding: 0;
+        margin-bottom: 25px;
+      }
+
+      @include tablet {
+        width: 45%;
+        padding: 0;
+        margin-bottom: 25px;
+      }
+
+      @include desktop {
+        width: 30%;
+        margin-bottom: 50px;
+      }
+
+      // Title
+      h3 {
+        @include normal-text;
+        font-weight: 600;
+        font-size: 1.5rem;
+
+        span {
+          display: block;
+          color: $red;
+          font-weight: 400;
+          margin-bottom: 10px;
+        }
+      }
+
+      // Img
+      img {
+        width: 100%;
+      }
+
+      // Description
+      > p {
+        @include normal-text;
+      }
+
+      // Link
+      a {
+        @include normal-text;
+        @include link;
+        color: $black;
+      }
+    }
+  }
+}

@@ -1,0 +1,76 @@
+@import "../../index.scss";
+
+.container {
+  //@include child-container;
+  margin-bottom: 100px;
+  @include phone {
+    margin-bottom: 50px;
+  }
+  // Hero image
+  > div:first-of-type {
+    background-color: $gray;
+    width: 100%;
+    height: 50vh;
+    position: relative;
+    z-index: -1;
+
+    img {
+      height: 50vh;
+      width: 100%;
+      object-fit: cover;
+      opacity: 0.9;
+    }
+
+    h2 {
+      //border: 1px solid;
+      display: block;
+      text-align: center;
+      font-size: 3rem;
+
+      height: 100px;
+      width: 400px;
+      position: absolute;
+      left: 50%;
+      margin-left: -200px;
+      top: 50%;
+      margin-top: -50px;
+    }
+
+    @include phone {
+      height: 40vh;
+      img {
+        height: 40vh;
+      }
+
+      h2 {
+        font-size: 2rem;
+        height: 50px;
+        width: 300px;
+        position: absolute;
+        left: 50%;
+        margin-left: -150px;
+        top: 50%;
+        margin-top: 0px;
+      }
+    }
+  }
+
+  section {
+    @include child-container;
+    padding: 50px 0 0;
+
+    @include phone {
+      padding: 25px 0 0;
+    }
+
+    p {
+      @include normal-text;
+      &:last-of-type {
+        margin-bottom: 50px;
+        @include phone {
+          margin-bottom: 25px;
+        }
+      }
+    }
+  }
+}

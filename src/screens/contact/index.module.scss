@@ -1,0 +1,83 @@
+@import "../../index.scss";
+
+.container {
+  @include child-container;
+  margin-bottom: 100px;
+  @include phone {
+    margin-bottom: 50px;
+  }
+
+  header {
+    @include page-header;
+  }
+
+  p {
+    @include normal-text;
+    margin-bottom: 25px;
+  }
+
+  // Form
+  form {
+    max-width: 50em;
+    display: flex;
+    flex-direction: column;
+
+    > div {
+      display: flex;
+      justify-content: space-between;
+
+      label {
+        width: 45%;
+      }
+
+      @include phone {
+        flex-direction: column;
+        label {
+          width: 100%;
+        }
+      }
+    }
+
+    label {
+      //border: 1px solid red;
+      display: flex;
+      flex-direction: column;
+
+      @include normal-text;
+      margin: 15px 0;
+      margin-bottom: 25px;
+
+      @include desktop {
+        margin-bottom: 35px 0;
+      }
+
+      input,
+      textarea {
+        @include normal-text;
+        border: none;
+        padding: 10px 2px;
+        border-bottom: 2px solid $black;
+        background-color: inherit;
+        outline: none;
+        -webkit-appearance: none;
+        border-radius: 0;
+      }
+
+      textarea {
+        //background-color: $gray;
+        resize: none;
+
+        &:focus {
+          height: 200px;
+          @include desktop {
+            height: 300px;
+          }
+        }
+      }
+    }
+
+    @include phone {
+      padding: 25px 0 50px;
+    }
+  }
+}

@@ -10,12 +10,13 @@ import Article from "./Article";
 const Blog = () => {
   return (
     <div className={styles.container}>
-      <Header title="Blog" />
+      <Header title="Новости" />
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio,
-        aliquid tempore quasi, alias dolore tenetur nemo a autem voluptatum
-        iusto maiores non quisquam mollitia eveniet? Pariatur, veniam fugiat!
-        Neque, obcaecati.
+        Лорем ипсум долор сит амет, ех мел иуварет алияуам садипсцинг, ет хинц
+        виси елаборарет яуи. Яуи ут мазим делецтус садипсцинг. Цум сцаевола
+        партиендо ин, иисяуе нонумес вивендум сеа ан, еа цум темпор цоррумпит
+        делицатиссими. Ех ферри моллис вих, те хас индоцтум оцурререт. Сонет
+        ментитум мел ех. Дуис цивибус перципит ет иус.
       </p>
       <div>
         <Article />

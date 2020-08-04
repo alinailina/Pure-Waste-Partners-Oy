@@ -14,7 +14,7 @@
 
   // Intro text
   > p {
-    @include normal-text;
+    @include text;
     margin-bottom: 25px;
   }
 
@@ -27,11 +27,10 @@
     .article,
     i {
       //border: 1px solid red;
-
       @include phone {
         width: 100%;
         padding: 0;
-        margin-bottom: 25px;
+        margin-bottom: 50px;
       }
 
       @include tablet {
@@ -47,14 +46,11 @@
 
       // Title
       h3 {
-        @include normal-text;
-        font-weight: 600;
-        font-size: 1.5rem;
-
+        @include text;
         span {
           display: block;
-          color: $red;
-          font-weight: 400;
+          color: gray;
+          font-weight: 300;
           margin-bottom: 10px;
         }
       }
@@ -66,12 +62,12 @@
 
       // Description
       > p {
-        @include normal-text;
+        @include text;
       }
 
       // Link
       a {
-        @include normal-text;
+        @include text;
         @include link;
         color: $black;
       }

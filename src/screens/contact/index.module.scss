@@ -3,6 +3,7 @@
 .container {
   @include child-container;
   margin-bottom: 100px;
+
   @include phone {
     margin-bottom: 50px;
   }
@@ -11,73 +12,164 @@
     @include page-header;
   }
 
-  p {
-    @include normal-text;
-    margin-bottom: 25px;
-  }
-
-  // Form
-  form {
-    max-width: 50em;
+  // Contact info
+  > section:first-of-type {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 50px;
 
-    > div {
-      display: flex;
-      justify-content: space-between;
+    p {
+      display: block;
+      width: 30%;
+      @include text;
 
-      label {
-        width: 45%;
-      }
-
-      @include phone {
-        flex-direction: column;
-        label {
-          width: 100%;
-        }
+      span {
+        display: block;
+        color: gray;
+        margin-bottom: 25px;
       }
     }
 
-    label {
-      //border: 1px solid red;
-      display: flex;
-      flex-direction: column;
-
-      @include normal-text;
-      margin: 15px 0;
-      margin-bottom: 25px;
-
-      @include desktop {
-        margin-bottom: 35px 0;
-      }
-
-      input,
-      textarea {
-        @include normal-text;
-        border: none;
-        padding: 10px 2px;
-        border-bottom: 2px solid $black;
-        background-color: inherit;
-        outline: none;
-        -webkit-appearance: none;
-        border-radius: 0;
-      }
-
-      textarea {
-        //background-color: $gray;
-        resize: none;
-
-        &:focus {
-          height: 200px;
-          @include desktop {
-            height: 300px;
-          }
+    @include tablet {
+      flex-wrap: wrap;
+      p {
+        width: 45%;
+        span {
+          margin-bottom: 10px;
         }
       }
     }
 
     @include phone {
-      padding: 25px 0 50px;
+      flex-direction: column;
+      p {
+        width: 100%;
+
+        span {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+
+  // Form
+  > section:nth-of-type(2) {
+    > h3 {
+      @include heading;
+      margin: 25px 0;
+
+      @include phone {
+        margin: 0;
+      }
+    }
+
+    form {
+      max-width: 50em;
+      display: flex;
+      flex-direction: column;
+
+      > div {
+        display: flex;
+        justify-content: space-between;
+
+        label {
+          width: 45%;
+        }
+
+        @include phone {
+          flex-direction: column;
+          label {
+            width: 100%;
+          }
+        }
+      }
+
+      label {
+        //border: 1px solid red;
+        display: flex;
+        flex-direction: column;
+        @include text;
+
+        p {
+          font-size: 0.8em;
+          a {
+            @include link;
+          }
+        }
+        color: gray;
+        margin: 15px 0;
+        margin-bottom: 25px;
+
+        @include desktop {
+          margin-bottom: 35px 0;
+        }
+
+        input,
+        textarea {
+          @include text;
+          border: none;
+          padding: 10px 2px;
+          border: 1px solid $black;
+          background-color: inherit;
+          outline: none;
+          -webkit-appearance: none;
+          border-radius: 1px;
+          margin: 10px 0 0;
+        }
+
+        textarea {
+          //background-color: $gray;
+          resize: none;
+
+          &:focus {
+            height: 200px;
+            @include desktop {
+              height: 300px;
+            }
+          }
+        }
+      }
+
+      @include phone {
+        padding: 25px 0 50px;
+      }
+    }
+  }
+
+  // Social
+  > section:nth-of-type(3) {
+    padding: 50px 0 0;
+    @include phone {
+      padding: 0;
+    }
+
+    > h3 {
+      @include heading;
+      margin-bottom: 50px;
+    }
+
+    ul {
+      padding: 0;
+      list-style-type: none;
+      display: flex;
+      justify-content: space-between;
+
+      li {
+        width: 25%;
+        a {
+          @include text;
+          @include link;
+        }
+      }
+    }
+
+    @include phone {
+      > h3 {
+        margin-bottom: 25px;
+      }
+      ul {
+        flex-direction: column;
+      }
     }
   }
 }

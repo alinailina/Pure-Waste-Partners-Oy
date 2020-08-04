@@ -8,33 +8,35 @@ const Footer = () => {
     <footer>
       <div>
         <aside>
-          <h3>[Logo]</h3>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos vitae
-            dolorum in enim expedita doloribus est sunt sit.
-          </p>
+          <h3>Компания</h3>
+          <p>Технологический уход за текстилем</p>
           <div>
-            <div>
-              {" "}
-              <img src={Facebook} alt="facebook-icon" />
-            </div>{" "}
-            <div>
-              <img src={Instagram} alt="instagram-icon" />
-            </div>
-            <div>
-              <img src={Linkedin} alt="linkedin-icon" />
-            </div>
+            <h4>Мы в социальных сетях:</h4>
+            <ul>
+              <li>
+                <a href="/">Linkedin</a>{" "}
+              </li>
+              <li>
+                <a href="/">Facebook</a>
+              </li>
+              <li>
+                <a href="/">Instagram</a>
+              </li>
+              <li>
+                <a href="/">Vkontakte</a>
+              </li>
+            </ul>
           </div>
         </aside>
         <form>
-          <h4>Subscribe to our newsletter</h4>
+          <h4>Подпишитесь на рассылку</h4>
           <div>
-            <input type="email" placeholder="Your email" />
-            <Button value="Subscribe" />
+            <input type="email" placeholder="Ваша почта" />
+            <input type="submit" value="Подписаться" />
           </div>
         </form>
       </div>
-      <p className="copyright">© - , 2020.</p>
+      <p className="copyright">© - Компания, 2020.</p>
     </footer>
   );
 };

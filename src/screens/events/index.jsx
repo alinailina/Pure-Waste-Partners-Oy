@@ -7,32 +7,32 @@ import Header from "../../components/Header";
 const Events = () => {
   return (
     <div className={styles.container}>
-      <Header title="Events" />
+      <Header title="События" />
       <ul>
         <li>
-          <p>
-            <span>September, 16 | 2020</span>
+          <h4>
+            <span>15 сентября | 2020</span>
             International Day for the Preservation of the Ozone Layer
-          </p>
+          </h4>
           <a
             href="https://www.un.org/en/events/ozoneday/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            View details
+            Подробнее
           </a>
         </li>
         <li>
-          <p>
-            <span>October, 16 | 2020</span>
+          <h4>
+            <span>16 октября| 2020</span>
             World Food Day
-          </p>
+          </h4>
           <a
             href="https://www.oxfamamerica.org/take-action/events/world-food-day/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            View details
+            Подробнее
           </a>
         </li>
       </ul>

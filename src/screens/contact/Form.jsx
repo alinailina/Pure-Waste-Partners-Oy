@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "../../components/Button";
+import { Link } from "react-router-dom";
 
 const Form = () => {
   return (
@@ -7,8 +8,9 @@ const Form = () => {
       <input type="hidden" name="form-name" value="contact" />
       <div>
         <label>
-          Name:
+          Имя:
           <input type="text" name="name" />
+          <p>Представьтесь, пожалуйста</p>
         </label>
         <label>
           Email:
@@ -17,11 +19,16 @@ const Form = () => {
       </div>
 
       <label>
-        Message:
+        Ваше сообщение:
         <textarea name="message"></textarea>
+        <p>
+          Отправляя форму, я даю свое согласие на обработку персональных данных
+          в соответствии с{" "}
+          <Link to="/">политикой конфиденциальности сайта</Link>
+        </p>
       </label>
       <div data-netlify-recapture="true"></div>
-      <Button value="Submit" />
+      <input type="submit" value="Отправить" />
     </form>
   );
 };

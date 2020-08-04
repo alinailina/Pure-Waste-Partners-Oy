@@ -13,7 +13,7 @@ const Navbar = () => {
     <nav>
       <div className="nav-logo">
         <Link to="/">
-          <h3>[Logo]</h3>
+          <h3>Компания</h3>
         </Link>
       </div>
       <div
@@ -25,19 +25,19 @@ const Navbar = () => {
 
       <ul className={active ? "active" : ""}>
         <Link to="about" onClick={toggleActive}>
-          About
+          О нас
         </Link>
         <Link to="shop" onClick={toggleActive}>
-          Shop
+          Магазин
         </Link>
         <Link to="events" onClick={toggleActive}>
-          Events
+          События
         </Link>
         <Link to="blog" onClick={toggleActive}>
-          Blog
+          Новости
         </Link>
         <Link to="contact" onClick={toggleActive}>
-          Contact
+          Контакты
         </Link>
       </ul>
     </nav>

@@ -1,32 +1,24 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Jost&family=Rubik+Mono+One&display=swap");
+// Fonts
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Mono:wght@200;300;400;500;600&display=swap");
 
 body {
+  font-family: "Roboto Mono", monospace;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 400;
+  font-weight: 300;
   color: #323232;
 }
 
 // Colors
 $black: #323232;
 $gray: #f3f3f3;
-$black: #323232;
-$gray: #f3f3f3;
-$yellow: #f5cb5c;
-$red: #f95738;
-$white: #f7fff7;
-$green: #a1c181;
-$beige: #fefae0;
+$linen: #e7d8c9;
+$danger: #d62828;
+$blue: #266f90;
+$dark-blue: #223a46;
 
-//rgb(161, 193, 129)
-$blue: #1a535c;
-$orange: #fe7f2d;
-
+// Media queries
 @mixin phone {
   @media only screen and (max-width: 768px) {
     @content;
@@ -45,6 +37,7 @@ $orange: #fe7f2d;
   }
 }
 
+// Mixins
 @mixin child-container {
   //border: 1px solid red;
   margin: 0 auto;
@@ -55,10 +48,7 @@ $orange: #fe7f2d;
   }
 }
 
-// Page header.div
 @mixin page-header {
-  h1 {
-  }
   @include phone {
     padding: 150px 0 0;
     h1 {
@@ -81,7 +71,20 @@ $orange: #fe7f2d;
   }
 }
 
-@mixin normal-text {
+@mixin heading {
+  font-size: 1.5rem;
+  line-height: 1.5;
+
+  @include tablet {
+    font-size: 1.75rem;
+  }
+
+  @include desktop {
+    font-size: 1.75vw;
+  }
+}
+
+@mixin text {
   font-size: 1rem;
   line-height: 1.5;
 
@@ -108,36 +111,21 @@ $orange: #fe7f2d;
   @include desktop {
     font-size: 2.25vw;
   }
-  font-family: "Jost", sans-serif;
-}
-
-@mixin heading {
-  font-size: 1.5rem;
-  line-height: 1.5;
-
-  @include tablet {
-    font-size: 1.75rem;
-  }
-
-  @include desktop {
-    font-size: 1.75vw;
-  }
 }
 
 @mixin link {
-  cursor: pointer;
+  color: $black;
   &:hover {
     text-decoration: none;
-    &::after {
-      content: "\2197";
-      font-size: 0.9em;
-      color: $black;
-      position: relative;
-      top: -10px;
-    }
+    color: $linen;
   }
 }
 
 img {
   width: 100%;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
 }

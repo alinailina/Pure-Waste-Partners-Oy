@@ -1,8 +1,7 @@
 import React from "react";
 import styles from "./index.module.scss";
 import Hero from "./Hero";
-import Problem from "./Problem";
-import Solution from "./Solution";
+
 const Home = () => {
   return (
     <div className={styles.container}>
@@ -13,7 +12,13 @@ const Home = () => {
           amet corrupti officiis.
         </p>
       </div>
-      <Problem />
+      <section>
+        <div>
+          {" "}
+          <img src={require("../../assets/uniforms/2.jpg")} alt="" />
+        </div>
+        <div></div>
+      </section>
       <div>
         {" "}
         <p>
@@ -21,7 +26,6 @@ const Home = () => {
           amet corrupti officiis eum, dolorum quos molestiae facilis?
         </p>
       </div>
-      <Solution />
       <div className={styles.icons}>
         <div>
           {" "}

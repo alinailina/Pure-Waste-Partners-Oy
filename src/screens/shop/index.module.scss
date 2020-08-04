@@ -3,7 +3,29 @@
 .container {
   @include child-container;
   margin-bottom: 100px;
+  @include phone {
+    margin-bottom: 50px;
+  }
+
+  // Header
   header {
     @include page-header;
+  }
+
+  // Intro text
+  > p {
+    @include text;
+    margin-bottom: 50px;
+  }
+
+  > div {
+    //border: 1px solid;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    > div {
+      width: 22%;
+      margin-bottom: 50px;
+    }
   }
 }

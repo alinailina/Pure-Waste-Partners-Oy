@@ -3,6 +3,7 @@
 .container {
   @include child-container;
   margin-bottom: 100px;
+
   @include phone {
     margin-bottom: 50px;
   }
@@ -19,17 +20,17 @@
       display: flex;
       flex-direction: column;
 
-      p {
-        @include normal-text;
+      h4 {
+        @include text;
         span {
           display: block;
-          color: $red;
           margin-bottom: 10px;
+          font-weight: 300;
         }
       }
 
       a {
-        @include normal-text;
+        @include text;
         @include link;
         color: $black;
       }

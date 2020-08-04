@@ -31,16 +31,36 @@ const Contact = () => {
         <h3>Мы в социальных сетях:</h3>
         <ul>
           <li>
-            <a href="/">LinkedIn</a>
+            <a href="/">
+              <span>
+                {" "}
+                <img src={require("../../assets/svgs/linkedin.svg")} alt="" />
+              </span>
+            </a>
           </li>
           <li>
-            <a href="/">Vk</a>
+            <a href="/">
+              <span>
+                {" "}
+                <img src={require("../../assets/svgs/vk.svg")} alt="" />
+              </span>
+            </a>
           </li>
           <li>
-            <a href="/">Facebook</a>
+            <a href="/">
+              <span>
+                {" "}
+                <img src={require("../../assets/svgs/fb.svg")} alt="" />
+              </span>
+            </a>
           </li>
           <li>
-            <a href="/">Instagram</a>
+            <a href="/">
+              <span>
+                {" "}
+                <img src={require("../../assets/svgs/ig.svg")} alt="" />
+              </span>
+            </a>
           </li>
         </ul>
       </section>

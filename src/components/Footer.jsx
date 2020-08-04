@@ -12,22 +12,44 @@ const Footer = () => {
             <h4>Мы в социальных сетях:</h4>
             <ul>
               <li>
-                <a href="/">Linkedin</a>{" "}
+                <a href="/">
+                  {" "}
+                  <span>
+                    {" "}
+                    <img src={require("../assets/svgs/linkedin.svg")} alt="" />
+                  </span>
+                </a>{" "}
               </li>
               <li>
-                <a href="/">Facebook</a>
+                <a href="/">
+                  <span>
+                    {" "}
+                    <img src={require("../assets/svgs/vk.svg")} alt="" />
+                  </span>
+                </a>
               </li>
               <li>
-                <a href="/">Instagram</a>
+                <a href="/">
+                  {" "}
+                  <span>
+                    {" "}
+                    <img src={require("../assets/svgs/fb.svg")} alt="" />
+                  </span>
+                </a>
               </li>
               <li>
-                <a href="/">Vkontakte</a>
+                <a href="/">
+                  <span>
+                    {" "}
+                    <img src={require("../assets/svgs/ig.svg")} alt="" />
+                  </span>
+                </a>
               </li>
             </ul>
           </div>
         </aside>
         <form>
-          <h4>Подпишитесь на рассылку</h4>
+          <h4>Подпишитесь на нашу рассылку</h4>
           <div>
             <input type="email" placeholder="Ваша почта" />
             <input type="submit" value="Подписаться" />

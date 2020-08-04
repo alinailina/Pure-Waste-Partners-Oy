@@ -12,12 +12,6 @@
     @include page-header;
   }
 
-  // Intro text
-  > p {
-    @include text;
-    margin-bottom: 25px;
-  }
-
   // Articles container
   > div {
     display: flex;
@@ -53,11 +47,6 @@
           font-weight: 300;
           margin-bottom: 10px;
         }
-      }
-
-      // Img
-      img {
-        width: 100%;
       }
 
       // Description

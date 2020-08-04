@@ -30,6 +30,20 @@ const Shop = () => {
         <div>
           <img src={require("../../assets/uniforms/5.jpg")} alt="" />
         </div>
+        <div>
+          <img src={require("../../assets/uniforms/6.jpg")} alt="" />
+        </div>
+        <div>
+          <img src={require("../../assets/uniforms/7.jpg")} alt="" />
+        </div>
+        <div>
+          <img src={require("../../assets/uniforms/8.jpg")} alt="" />
+        </div>
+        <div>
+          <img src={require("../../assets/uniforms/9.jpg")} alt="" />
+        </div>
+        <i aria-hidden={true}></i>
+        <i aria-hidden={true}></i>
       </div>
     </div>
   );

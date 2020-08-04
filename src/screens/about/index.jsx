@@ -1,8 +1,5 @@
 import React from "react";
 //import { Link } from "react-router-dom";
-// Components
-//import Header from "../../components/Header";
-//import Button from "../../components/Button";
 
 // Styles
 import styles from "./index.module.scss";
@@ -11,9 +8,7 @@ const About = () => {
   return (
     <div className={styles.container}>
       <div>
-        {" "}
         <img src={require("../../assets/hero.jpg")} alt="" />
-        <h2>Компания</h2>
       </div>
       <section>
         <p>

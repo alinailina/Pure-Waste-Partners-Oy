@@ -35,76 +35,57 @@
           // Links
           > div {
             display: flex;
+            align-items: center;
             margin: 10px 0;
 
-            a {
+            // Подробнее о нас
+            a:first-of-type {
+              @include text;
+              @include link;
+              margin-right: 15px;
+            }
+
+            // Контакты
+            a:last-of-type {
               text-decoration: none;
-              font-weight: 400;
-              &:first-of-type {
-                width: 200px;
-                font-size: 1.25rem;
-                text-align: center;
+              width: 200px;
+              font-size: 1.25rem;
+              text-align: center;
 
-                @include tablet {
-                  font-size: 1.5rem;
-                }
-
-                @include desktop {
-                  min-width: 200px;
-                  width: 10vw;
-                  font-size: 1.5vw;
-                }
-
-                border-radius: 2px;
-                padding: 8px 0;
-                background-color: transparent;
-                transition: all 0.25s ease;
-                cursor: pointer;
-                outline: none;
-
-                background-color: none;
-                border: 1px solid $black;
-                color: $black;
-
-                &:hover {
-                  background-color: $black;
-                  border: 1px solid $black;
-                  color: $linen;
-                }
-                margin-right: 10px;
+              @include tablet {
+                font-size: 1.5rem;
               }
 
-              &:last-of-type {
-                width: 200px;
-                font-size: 1.25rem;
-                text-align: center;
+              @include desktop {
+                min-width: 200px;
+                width: 10vw;
+                font-size: 1.5vw;
+              }
 
-                @include tablet {
-                  font-size: 1.5rem;
-                }
+              border-radius: 2px;
+              padding: 8px 0;
+              background-color: $black;
 
-                @include desktop {
-                  min-width: 200px;
-                  width: 10vw;
-                  font-size: 1.5vw;
-                }
+              transition: all 0.25s ease;
+              cursor: pointer;
+              outline: none;
 
-                border-radius: 2px;
-                padding: 8px 0;
+              background-color: none;
+              border: 1px solid $black;
+              color: $linen;
+
+              &:hover {
                 background-color: transparent;
-                transition: all 0.25s ease;
-                cursor: pointer;
-                outline: none;
-
-                background-color: $black;
                 border: 1px solid $black;
-                color: $linen;
+                color: $black;
+              }
+            }
 
-                &:hover {
-                  background-color: transparent;
-                  border: 1px solid $black;
-                  color: $black;
-                }
+            @include tablet {
+              flex-direction: column;
+              align-items: flex-start;
+              a:first-of-type {
+                margin-bottom: 25px;
               }
             }
           }
@@ -124,10 +105,15 @@
       > div {
         //border: 1px solid;
         width: 100%;
+
         img {
           margin-top: 80px;
           margin-bottom: -10px;
-          height: 40vh;
+          height: 30vh;
+        }
+
+        &:first-of-type {
+          height: calc(100vh - 30vh - 70px);
         }
       }
     }
@@ -145,7 +131,15 @@
     p {
       display: block;
       width: 80%;
-      @include heading;
+      @include phone {
+        font-size: 6vw;
+      }
+      @include tablet {
+        font-size: 5vw;
+      }
+      @include desktop {
+        font-size: 3vw;
+      }
       color: $black;
       span {
         display: block;

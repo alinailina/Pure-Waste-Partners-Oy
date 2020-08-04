@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -8,8 +9,8 @@ const Hero = () => {
           <h1>Компания</h1>
           <p>Технологический уход за текстилем</p>
           <div>
-            <a href="/">Подробнее</a>
-            <a href="/">Контакты</a>
+            <Link to="/about">Подробнее о нас</Link>
+            <Link to="/contact">Контакты</Link>
           </div>
         </div>
       </div>

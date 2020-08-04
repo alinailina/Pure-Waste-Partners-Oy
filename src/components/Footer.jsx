@@ -1,8 +1,6 @@
 import React from "react";
 import "./index.scss";
 
-import { Facebook, Instagram, Linkedin } from "../assets/icons";
-import Button from "./Button";
 const Footer = () => {
   return (
     <footer>

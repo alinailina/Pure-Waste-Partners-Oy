@@ -11,7 +11,7 @@ import Home from "./screens/home/index.jsx";
 import About from "./screens/about";
 import Shop from "./screens/shop";
 import Events from "./screens/events";
-import Blog from "./screens/blog";
+import Blog from "./screens/news";
 import Contact from "./screens/contact";
 
 function App() {

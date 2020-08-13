@@ -6,8 +6,8 @@ const Footer = () => {
     <footer>
       <div>
         <aside>
-          <h3>Компания</h3>
-          <p>Технологический уход за текстилем</p>
+          <h3>FabRevizion</h3>
+          <p>Новый взгляд на уход за текстилем</p>
           <div>
             <h4>Мы в социальных сетях:</h4>
             <ul>
@@ -56,7 +56,7 @@ const Footer = () => {
           </div>
         </form>
       </div>
-      <p className="copyright">© - Компания, 2020.</p>
+      <p className="copyright">© - FabRevizion, 2020.</p>
     </footer>
   );
 };

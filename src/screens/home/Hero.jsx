@@ -6,8 +6,8 @@ const Hero = () => {
     <section>
       <div>
         <div>
-          <h1>Компания</h1>
-          <p>Технологический уход за текстилем</p>
+          <h1>FabRevizion</h1>
+          <p>Новый взгляд на уход за текстилем</p>
           <div>
             <Link to="/about">Подробнее о нас</Link>
             <Link to="/contact">Контакты</Link>

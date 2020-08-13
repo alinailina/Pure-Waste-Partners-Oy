@@ -13,7 +13,7 @@ const Navbar = () => {
     <nav>
       <div className="nav-logo">
         <Link to="/">
-          <h3>Компания</h3>
+          <h3>FabRevizion</h3>
         </Link>
       </div>
       <div

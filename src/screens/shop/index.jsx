@@ -8,43 +8,78 @@ const Shop = () => {
   return (
     <div className={styles.container}>
       <Header title="Магазин" />
-      <p>
-        Лорем ипсум долор сит амет, ех мел иуварет алияуам садипсцинг, ет хинц
-        виси елаборарет яуи. Яуи ут мазим делецтус садипсцинг. Цум сцаевола
-        партиендо ин, иисяуе нонумес вивендум сеа ан, еа цум темпор цоррумпит
-        делицатиссими. Ех ферри моллис вих, те хас индоцтум оцурререт. Сонет
-        ментитум мел ех. Дуис цивибус перципит ет иус.
-      </p>
-      <div>
-        {" "}
+      <section>
+        <p>
+          Наш магазин готовится к запуску в он-лайн режиме. Пока вы можете
+          заказать у нас предметы униформы, представленные в галерее ниже.{" "}
+        </p>
+        <p>
+          Все изделия выполнены из вторичных материалов, обработанных и отшитых
+          по методу{" "}
+          <a
+            href="https://taukodesign.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            TAUKO design
+          </a>
+          .
+        </p>
+      </section>
+      <section>
         <div>
-          {" "}
-          <img src={require("../../assets/uniforms/2.jpg")} alt="" />
+          <div>
+            <img src={require("../../assets/uniforms/2.jpg")} alt="" />
+            <div>
+              <h4>Сделать заказ</h4>
+            </div>
+          </div>
+          <div>
+            <img src={require("../../assets/uniforms/3.jpg")} alt="" />
+            <div>
+              <h4>Сделать заказ</h4>
+            </div>
+          </div>
+          <div>
+            <img src={require("../../assets/uniforms/4.jpg")} alt="" />
+            <div>
+              <h4>Сделать заказ</h4>
+            </div>
+          </div>
+          <div>
+            <img src={require("../../assets/uniforms/5.jpg")} alt="" />
+            <div>
+              <h4>Сделать заказ</h4>
+            </div>
+          </div>
+          <div>
+            <img src={require("../../assets/uniforms/6.jpg")} alt="" />
+            <div>
+              <h4>Сделать заказ</h4>
+            </div>
+          </div>
+          <div>
+            <img src={require("../../assets/uniforms/7.jpg")} alt="" />
+            <div>
+              <h4>Сделать заказ</h4>
+            </div>
+          </div>
+          <div>
+            <img src={require("../../assets/uniforms/8.jpg")} alt="" />
+            <div>
+              <h4>Сделать заказ</h4>
+            </div>
+          </div>
+          <div>
+            <img src={require("../../assets/uniforms/9.jpg")} alt="" />
+            <div>
+              <h4>Сделать заказ</h4>
+            </div>
+          </div>
+          <i aria-hidden={true}></i>
+          <i aria-hidden={true}></i>
         </div>
-        <div>
-          <img src={require("../../assets/uniforms/3.jpg")} alt="" />
-        </div>
-        <div>
-          <img src={require("../../assets/uniforms/4.jpg")} alt="" />
-        </div>
-        <div>
-          <img src={require("../../assets/uniforms/5.jpg")} alt="" />
-        </div>
-        <div>
-          <img src={require("../../assets/uniforms/6.jpg")} alt="" />
-        </div>
-        <div>
-          <img src={require("../../assets/uniforms/7.jpg")} alt="" />
-        </div>
-        <div>
-          <img src={require("../../assets/uniforms/8.jpg")} alt="" />
-        </div>
-        <div>
-          <img src={require("../../assets/uniforms/9.jpg")} alt="" />
-        </div>
-        <i aria-hidden={true}></i>
-        <i aria-hidden={true}></i>
-      </div>
+      </section>
     </div>
   );
 };

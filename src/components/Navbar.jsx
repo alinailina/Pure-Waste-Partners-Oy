@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./index.scss";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const [active, setActive] = useState(false);
@@ -12,9 +12,9 @@ const Navbar = () => {
   return (
     <nav>
       <div className="nav-logo">
-        <Link to="/">
+        <NavLink to="/">
           <h3>FabRevizion</h3>
-        </Link>
+        </NavLink>
       </div>
       <div
         className={active ? "toggle active" : "toggle"}
@@ -24,21 +24,41 @@ const Navbar = () => {
       </div>
 
       <ul className={active ? "active" : ""}>
-        <Link to="about" onClick={toggleActive}>
+        <NavLink
+          to="about"
+          onClick={toggleActive}
+          activeClassName="navlink-active"
+        >
           О нас
-        </Link>
-        <Link to="shop" onClick={toggleActive}>
+        </NavLink>
+        <NavLink
+          to="shop"
+          onClick={toggleActive}
+          activeClassName="navlink-active"
+        >
           Магазин
-        </Link>
-        <Link to="events" onClick={toggleActive}>
+        </NavLink>
+        <NavLink
+          to="events"
+          onClick={toggleActive}
+          activeClassName="navlink-active"
+        >
           События
-        </Link>
-        <Link to="blog" onClick={toggleActive}>
+        </NavLink>
+        <NavLink
+          to="blog"
+          onClick={toggleActive}
+          activeClassName="navlink-active"
+        >
           Новости
-        </Link>
-        <Link to="contact" onClick={toggleActive}>
+        </NavLink>
+        <NavLink
+          to="contact"
+          onClick={toggleActive}
+          activeClassName="navlink-active"
+        >
           Контакты
-        </Link>
+        </NavLink>
       </ul>
     </nav>
   );

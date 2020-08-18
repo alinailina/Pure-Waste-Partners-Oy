@@ -1,32 +1,78 @@
 @import "../../index.scss";
 
 .container {
-  @include child-container;
-  margin-bottom: 100px;
-  @include phone {
-    margin-bottom: 50px;
-  }
-
   // Header
   header {
+    @include child-container;
     @include page-header;
   }
 
   // Intro text
-  > p {
-    @include text;
+  section:first-of-type {
+    @include child-container;
     margin-bottom: 50px;
+    p {
+      @include text;
+
+      a {
+        @include link;
+      }
+    }
   }
 
-  > div {
-    //border: 1px solid;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    > div,
-    i {
-      width: 22%;
-      margin-bottom: 50px;
+  // Photos
+  section:nth-of-type(2) {
+    background-color: $dark-blue;
+    padding: 100px 0 50px;
+    // Inner flex container
+    > div {
+      @include child-container;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      // Flex item
+      > div,
+      i {
+        width: 22%;
+        @include phone {
+          width: 45%;
+        }
+        margin-bottom: 50px;
+        position: relative;
+        cursor: pointer;
+
+        > img {
+          opacity: 1;
+          backface-visibility: hidden;
+          transition: 0.5s ease;
+        }
+
+        > div {
+          transition: 0.5s ease;
+          opacity: 0;
+          text-align: center;
+
+          h4 {
+            @include text;
+            color: white;
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+        }
+
+        &:hover {
+          img {
+            opacity: 0.5;
+          }
+
+          > div {
+            opacity: 1;
+          }
+        }
+      }
     }
   }
 }

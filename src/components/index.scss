@@ -36,6 +36,11 @@ nav {
       color: $black;
       font-size: 1.1rem;
       text-decoration: none;
+
+      &:hover,
+      &.navlink-active {
+        text-decoration: underline;
+      }
     }
   }
 
@@ -46,6 +51,7 @@ nav {
 
   @include phone {
     position: fixed;
+    z-index: 1;
     width: 100%;
 
     .nav-logo {

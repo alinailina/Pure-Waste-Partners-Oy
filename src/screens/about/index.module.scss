@@ -56,19 +56,22 @@
 
   section {
     @include child-container;
-    padding: 50px 0 0;
 
-    @include phone {
-      padding: 25px 0 0;
+    &:first-of-type {
+      padding: 50px 0 25px;
+    }
+
+    padding: 25px 0;
+
+    h3 {
+      @include heading;
     }
 
     p {
       @include text;
-      &:last-of-type {
-        margin-bottom: 50px;
-        @include phone {
-          margin-bottom: 25px;
-        }
+
+      a {
+        @include link;
       }
     }
   }

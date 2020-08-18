@@ -119,93 +119,107 @@
     }
   }
 
-  // Text containers
+  // CTA
   > div {
     //border: 1px solid;
     background-color: $linen;
     padding: 100px 0;
+    @include phone {
+      padding: 50px 0;
+    }
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
 
-    p {
-      display: block;
-      width: 80%;
-      @include phone {
-        font-size: 6vw;
-      }
-      @include tablet {
-        font-size: 5vw;
-      }
-      @include desktop {
-        font-size: 3vw;
-      }
-      color: $black;
-      span {
-        display: block;
-        margin: 0;
-        img {
-          width: 150px;
-        }
-      }
+    > div {
+      @include child-container;
     }
 
-    @include phone {
-      min-height: auto;
-      padding: 75px 0 50px;
-      p {
-        width: 90%;
+    p {
+      margin-bottom: 50px;
+      @include phone {
+        font-size: 4vw;
+      }
+
+      @include tablet {
+        font-size: 3vw;
+      }
+
+      @include desktop {
+        font-size: 2.5vw;
       }
     }
   }
 
+  // How it works
   ul {
-    @include child-container;
-    max-width: 60em;
-    padding: 50px 0;
+    //@include child-container;
+    padding: 100px 0 0;
+
+    h3 {
+      @include heading;
+      text-align: center;
+    }
 
     li {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 25px 0;
-
-      > div {
-        // border: 1px solid;
-        width: 15%;
+      //border: 1px solid;
+      &:nth-of-type(2),
+      &:nth-of-type(4) {
+        background-color: $gray;
       }
 
-      p {
-        // border: 1px solid;
-        width: 80%;
-        display: block;
-        @include text;
+      > div {
+        @include child-container;
 
-        a {
-          display: block;
-          padding: 10px 0;
-          @include text;
-          @include link;
+        padding: 100px 0;
+        max-width: 65em;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        // Icon
+        div:first-of-type {
+          // border: 1px solid;
+          width: 15%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        // Text
+        div:nth-of-type(2) {
+          width: 75%;
+          p {
+            display: block;
+            @include text;
+
+            a {
+              @include link;
+            }
+          }
         }
       }
     }
 
     @include phone {
+      padding: 50px 0 0;
       li {
-        flex-direction: column;
-        padding: 10px 0;
         > div {
-          // border: 1px solid;
-          width: 25%;
-        }
+          flex-direction: column;
+          padding: 50px 0;
 
-        p {
-          // border: 1px solid;
-          width: 100%;
-          display: block;
-          @include text;
-          text-align: center;
+          // Icon
+          div:first-of-type {
+            // border: 1px solid;
+            width: 30%;
+            max-width: 20em;
+          }
+
+          // Text
+          div:nth-of-type(2) {
+            width: 100%;
+          }
         }
       }
     }
@@ -214,7 +228,11 @@
   // Bottom link
   > a {
     display: block;
-    padding: 50px 0 100px;
+    padding: 0 0 150px;
+
+    @include phone {
+      padding: 0 0 100px;
+    }
     width: 100%;
     @include text;
     @include link;

@@ -24,7 +24,7 @@ const Home = () => {
         <li>
           <div>
             <div>
-              <img src={require("../../assets/svgs/t-shirt.svg")} alt="" />
+              <img src={require("../../assets/svgs/step1.svg")} alt="" />
             </div>
             <div>
               {" "}
@@ -43,7 +43,7 @@ const Home = () => {
         <li>
           <div>
             <div>
-              <img src={require("../../assets/svgs/factory.svg")} alt="" />
+              <img src={require("../../assets/svgs/step2.svg")} alt="" />
             </div>
             <div>
               <p>
@@ -62,7 +62,7 @@ const Home = () => {
         <li>
           <div>
             <div>
-              <img src={require("../../assets/svgs/certificate.svg")} alt="" />
+              <img src={require("../../assets/svgs/step3.svg")} alt="" />
             </div>
             <div>
               {" "}
@@ -83,7 +83,7 @@ const Home = () => {
           <div>
             {" "}
             <div>
-              <img src={require("../../assets/svgs/t-shirt.svg")} alt="" />
+              <img src={require("../../assets/svgs/step4.svg")} alt="" />
             </div>
             <div>
               <p>
@@ -101,7 +101,7 @@ const Home = () => {
         <li>
           <div>
             <div>
-              <img src={require("../../assets/svgs/t-shirt.svg")} alt="" />
+              <img src={require("../../assets/svgs/step5.svg")} alt="" />
             </div>
             <div>
               <p>

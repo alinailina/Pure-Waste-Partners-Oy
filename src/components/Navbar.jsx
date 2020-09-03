@@ -13,7 +13,7 @@ const Navbar = () => {
     <nav>
       <div className="nav-logo">
         <NavLink to="/">
-          <h3>FabRevizion</h3>
+          <img src={require("../assets/svgs/logo.svg")} alt="" />
         </NavLink>
       </div>
       <div
@@ -24,41 +24,64 @@ const Navbar = () => {
       </div>
 
       <ul className={active ? "active" : ""}>
-        <NavLink
-          to="about"
-          onClick={toggleActive}
-          activeClassName="navlink-active"
-        >
-          О нас
-        </NavLink>
-        <NavLink
-          to="shop"
-          onClick={toggleActive}
-          activeClassName="navlink-active"
-        >
-          Магазин
-        </NavLink>
-        <NavLink
-          to="events"
-          onClick={toggleActive}
-          activeClassName="navlink-active"
-        >
-          События
-        </NavLink>
-        <NavLink
-          to="blog"
-          onClick={toggleActive}
-          activeClassName="navlink-active"
-        >
-          Новости
-        </NavLink>
-        <NavLink
-          to="contact"
-          onClick={toggleActive}
-          activeClassName="navlink-active"
-        >
-          Контакты
-        </NavLink>
+        <li className={active ? "" : "active"} onClick={toggleActive}>
+          <p>Компания</p>
+          <ul>
+            <li>
+              <NavLink to="/about" activeClassName="navlink-active">
+                О нас
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/process" activeClassName="navlink-active">
+                Как мы работаем
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/principles" activeClassName="navlink-active">
+                Наши принципы
+              </NavLink>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <NavLink
+            to="shop"
+            onClick={toggleActive}
+            activeClassName="navlink-active"
+          >
+            Магазин
+          </NavLink>
+        </li>
+
+        <li>
+          <NavLink
+            to="events"
+            onClick={toggleActive}
+            activeClassName="navlink-active"
+          >
+            События
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="blog"
+            onClick={toggleActive}
+            activeClassName="navlink-active"
+          >
+            Новости
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="contact"
+            onClick={toggleActive}
+            activeClassName="navlink-active"
+          >
+            Контакты
+          </NavLink>
+        </li>
       </ul>
     </nav>
   );

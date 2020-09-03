@@ -3,21 +3,27 @@
 nav {
   background-color: white;
   height: 80px;
+  @include desktop {
+    height: 12vh;
+  }
   display: flex;
   align-items: center;
   justify-content: space-between;
 
   // Logo
   > div {
-    //border: 1px solid red;
+    //border: 1px solid;
     a {
-      text-decoration: none;
-      color: $black;
+      display: block;
+      width: 50px;
+      margin: 0 20px;
+      @include desktop {
+        width: 4vw;
+        margin: 0 2vw;
+      }
 
-      h3 {
-        @include heading;
-        margin: 0;
-        padding: 0 20px;
+      img {
+        width: 100%;
       }
     }
   }
@@ -25,21 +31,58 @@ nav {
   // Menu
   ul {
     padding: 0;
-    margin: 0;
+    margin: 0 20px 0 0;
+    @include desktop {
+      margin: 0 2vw;
+    }
     list-style-type: none;
     display: flex;
-    a {
-      //border: 1px solid red;
+    position: relative;
 
+    > li {
       padding: 20px 10px;
       margin: 0 10px;
-      color: $black;
-      font-size: 1.1rem;
-      text-decoration: none;
+      display: flex;
 
-      &:hover,
-      &.navlink-active {
-        text-decoration: underline;
+      p {
+        @include text;
+        margin: 0;
+        cursor: default;
+      }
+
+      a {
+        display: block;
+        @include text;
+        color: $black;
+        text-decoration: none;
+        &:hover {
+          color: $linen;
+        }
+        &.navlink-active {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    // Dropdown list
+    ul {
+      background-color: white;
+      position: absolute;
+      top: 70px;
+      left: 0;
+      flex-direction: column;
+      opacity: 0;
+      visibility: hidden;
+      transition: 0.25s ease;
+      padding: 0;
+      margin: 0;
+    }
+
+    // Display on hover
+    li:hover {
+      ul {
+        opacity: 1;
+        visibility: visible;
       }
     }
   }
@@ -57,7 +100,7 @@ nav {
     .nav-logo {
       position: fixed;
       z-index: 2;
-      top: 20px;
+      top: 17.5px;
     }
 
     ul {
@@ -67,6 +110,7 @@ nav {
       align-items: flex-start;
       justify-content: center;
       position: fixed;
+      margin: 0;
       top: 0;
       right: -100%;
       height: 100%;
@@ -78,12 +122,58 @@ nav {
       transition-timing-function: cubic-bezier(0.66, 0, 0.34, 1);
       z-index: 1;
 
-      a {
-        font-size: 2rem;
-      }
-
       &.active {
         right: 0;
+      }
+
+      > li {
+        // border: 1px solid;
+        padding: 10px 0;
+        margin: 0;
+        display: flex;
+        width: 100%;
+
+        // Nav item with dropdown
+        &:first-of-type {
+          display: flex;
+          flex-direction: column;
+
+          p {
+            font-size: 1.25rem;
+            margin: 0;
+          }
+          // Dropdown list
+          ul {
+            width: 80%;
+            background-color: $linen;
+            position: relative;
+            top: 0;
+            left: 0;
+            flex-direction: column;
+            opacity: 1;
+            visibility: visible;
+            display: block;
+            padding: 0 20px;
+            li {
+              a {
+                font-size: 1.25rem;
+              }
+            }
+          }
+        }
+
+        // Other nav items
+        a {
+          display: block;
+          font-size: 1.25rem;
+          color: $black;
+          text-decoration: none;
+          &:hover,
+          &.navlink-active {
+            color: $black;
+            text-decoration: underline;
+          }
+        }
       }
     }
 
@@ -170,7 +260,6 @@ footer {
       // Logo
       h3 {
         //border: 1px solid red;
-
         font-size: 2rem;
         line-height: 1.5;
 
@@ -184,6 +273,7 @@ footer {
         margin-bottom: 25px;
         margin: 0;
         color: white;
+        text-transform: uppercase;
       }
 
       // Tagline
@@ -197,7 +287,7 @@ footer {
       // Мы в социальных сетях
       > div {
         width: 100%;
-        padding: 25px 0;
+        padding: 25px 0 10px;
         display: flex;
         flex-direction: column;
 
@@ -208,13 +298,18 @@ footer {
         }
 
         ul {
-          position: relative;
-          left: -10px;
+          // border: 1px solid red;
+          list-style-type: none;
+          padding: 10px 0;
+          @include desktop {
+            padding: 1vw 0;
+          }
           display: flex;
+          justify-content: space-between;
           width: 50%;
-          max-width: 30em;
+          max-width: 40em;
           li {
-            width: 25%;
+            width: 20%;
           }
         }
       }
@@ -226,11 +321,12 @@ footer {
       display: flex;
       flex-direction: column;
 
+      // Подпишитесь на нашу рассылку
       h4 {
         //border: 1px solid red;
         @include heading;
         margin: 0;
-        margin: 20px 0;
+        margin: 5px 0 25px;
         color: white;
       }
 
@@ -274,7 +370,7 @@ footer {
       }
 
       form {
-        width: 80%;
+        width: 100%;
 
         input[type="email"] {
           width: 35vw;
@@ -307,11 +403,12 @@ footer {
 
   .copyright {
     @include text;
+    text-transform: uppercase;
     color: white;
     text-align: center;
-    padding: 25px 0;
+    padding: 25px 0 50px;
     @include desktop {
-      padding: 1vw 0 1.25vw;
+      padding: 0 0 3vw;
     }
     margin: 0;
   }

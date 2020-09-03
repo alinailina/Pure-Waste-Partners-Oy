@@ -20,7 +20,7 @@ const Contact = () => {
         </p>{" "}
         <p>
           <span>Адрес электронной почты</span>
-          info@company.ru
+          info@fabrevizion.ru
         </p>
       </section>
       <section>
@@ -33,32 +33,40 @@ const Contact = () => {
           <li>
             <a href="/">
               <span>
-                {" "}
-                <img src={require("../../assets/svgs/linkedin.svg")} alt="" />
+                <img
+                  src={require("../../assets/svgs/linkedin.svg")}
+                  alt="linkedin"
+                />
               </span>
             </a>
           </li>
           <li>
             <a href="/">
               <span>
-                {" "}
-                <img src={require("../../assets/svgs/vk.svg")} alt="" />
+                <img
+                  src={require("../../assets/svgs/facebook.svg")}
+                  alt="facebook"
+                />
               </span>
             </a>
           </li>
           <li>
             <a href="/">
               <span>
-                {" "}
-                <img src={require("../../assets/svgs/fb.svg")} alt="" />
+                <img
+                  src={require("../../assets/svgs/medium.svg")}
+                  alt="medium"
+                />
               </span>
             </a>
           </li>
           <li>
             <a href="/">
               <span>
-                {" "}
-                <img src={require("../../assets/svgs/ig.svg")} alt="" />
+                <img
+                  src={require("../../assets/svgs/instagram.svg")}
+                  alt="instagram"
+                />
               </span>
             </a>
           </li>

@@ -3,7 +3,7 @@
 .container {
   // Header
   header {
-    @include child-container;
+    @include container;
     @include page-header;
   }
 
@@ -22,7 +22,7 @@
 
   // Photos
   section:nth-of-type(2) {
-    background-color: $dark-blue;
+    background-color: $linen;
     padding: 100px 0 50px;
     // Inner flex container
     > div {

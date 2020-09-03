@@ -23,12 +23,20 @@
           // Name
           h1 {
             font-size: 3rem;
+
+            @include desktop {
+              font-size: 4vw;
+            }
             margin: 10px 0;
+            text-transform: uppercase;
           }
 
           // Tagline
           p {
             font-size: 1.5rem;
+            @include desktop {
+              font-size: 2vw;
+            }
             margin: 10px 0;
           }
 
@@ -49,17 +57,12 @@
             a:last-of-type {
               text-decoration: none;
               width: 200px;
-              font-size: 1.25rem;
+              @include text;
               text-align: center;
-
-              @include tablet {
-                font-size: 1.5rem;
-              }
 
               @include desktop {
                 min-width: 200px;
                 width: 10vw;
-                font-size: 1.5vw;
               }
 
               border-radius: 2px;
@@ -72,7 +75,7 @@
 
               background-color: none;
               border: 1px solid $black;
-              color: $linen;
+              color: white;
 
               &:hover {
                 background-color: transparent;
@@ -120,8 +123,7 @@
   }
 
   // CTA
-  > div {
-    //border: 1px solid;
+  > div:first-of-type {
     background-color: $linen;
     padding: 100px 0;
     @include phone {
@@ -133,7 +135,7 @@
     text-align: center;
 
     > div {
-      @include child-container;
+      @include container;
     }
 
     p {
@@ -152,77 +154,16 @@
     }
   }
 
-  // How it works
-  ul {
-    //@include child-container;
-    padding: 100px 0 0;
-
-    h3 {
-      @include heading;
-      text-align: center;
+  // Text
+  > div:nth-of-type(2) {
+    @include container;
+    padding: 50px 0;
+    p {
+      @include text;
     }
 
-    li {
-      //border: 1px solid;
-      &:nth-of-type(2),
-      &:nth-of-type(4) {
-        background-color: rgba(38, 111, 144, 0.25);
-        background-color: $gray;
-      }
-
-      > div {
-        @include child-container;
-
-        padding: 100px 0;
-        max-width: 65em;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        // Icon
-        div:first-of-type {
-          // border: 1px solid;
-          width: 15%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
-
-        // Text
-        div:nth-of-type(2) {
-          width: 75%;
-          p {
-            display: block;
-            @include text;
-
-            a {
-              @include link;
-            }
-          }
-        }
-      }
-    }
-
-    @include phone {
-      padding: 50px 0 0;
-      li {
-        > div {
-          flex-direction: column;
-          padding: 50px 0;
-
-          // Icon
-          div:first-of-type {
-            // border: 1px solid;
-            width: 30%;
-            max-width: 20em;
-          }
-
-          // Text
-          div:nth-of-type(2) {
-            width: 100%;
-          }
-        }
-      }
+    a {
+      @include link;
     }
   }
 

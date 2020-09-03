@@ -49,23 +49,34 @@ $dark-blue: #223a46;
   }
 }
 
+// Mixins
+@mixin container {
+  //border: 1px solid red;
+  margin: 0 auto;
+  width: 90vw;
+
+  @include desktop {
+    width: 80vw;
+  }
+}
+
 @mixin page-header {
   @include phone {
-    padding: 150px 0 0;
+    padding: 150px 0 25px;
     h1 {
       font-size: 2rem;
     }
   }
 
   @include tablet {
-    padding: 100px 0 0;
+    padding: 100px 0 25px;
     h1 {
       font-size: 2.5rem;
     }
   }
 
   @include desktop {
-    padding: 100px 0 0;
+    padding: 100px 0 25px;
     h1 {
       font-size: 3vw;
     }
@@ -85,6 +96,7 @@ $dark-blue: #223a46;
   }
 }
 
+// Body
 @mixin text {
   font-size: 1rem;
   line-height: 1.5;
@@ -94,7 +106,7 @@ $dark-blue: #223a46;
   }
 
   @include desktop {
-    font-size: 1.25vw;
+    font-size: 1.5vw;
   }
 }
 
@@ -109,9 +121,4 @@ $dark-blue: #223a46;
 
 img {
   width: 100%;
-}
-
-ul {
-  padding: 0;
-  list-style-type: none;
 }

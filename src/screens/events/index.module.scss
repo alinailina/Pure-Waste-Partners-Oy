@@ -1,7 +1,7 @@
 @import "../../index.scss";
 
 .container {
-  @include child-container;
+  @include container;
   margin-bottom: 100px;
 
   @include phone {
@@ -12,29 +12,7 @@
     @include page-header;
   }
 
-  ul {
-    padding: 0;
-    list-style: none;
-
-    li {
-      display: flex;
-      flex-direction: column;
-
-      h4 {
-        @include text;
-        span {
-          display: block;
-          margin-bottom: 10px;
-          font-weight: 300;
-        }
-      }
-
-      a {
-        @include text;
-        @include link;
-        color: $black;
-      }
-      margin-bottom: 25px;
-    }
+  p {
+    @include text;
   }
 }

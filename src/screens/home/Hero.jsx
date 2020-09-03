@@ -15,7 +15,7 @@ const Hero = () => {
         </div>
       </div>
       <div>
-        <img src={require("../../assets/1.jpg")} alt="" />
+        <img src={require("../../assets/1.jpg")} alt="textiles" />
       </div>
     </section>
   );

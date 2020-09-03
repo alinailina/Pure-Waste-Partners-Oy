@@ -8,10 +8,22 @@ import ScrollToTop from "./components/ScrollToTop";
 
 // Layout
 import Home from "./screens/home/index.jsx";
-import About from "./screens/about";
+
+// About
+import About from "./screens/company/About";
+import Process from "./screens/company/Process";
+import Principles from "./screens/company/Principles";
+
+// Shop
 import Shop from "./screens/shop";
+
+// Events
 import Events from "./screens/events";
+
+// Blog
 import Blog from "./screens/news";
+
+// Contact
 import Contact from "./screens/contact";
 
 function App() {
@@ -19,12 +31,25 @@ function App() {
     <Router>
       <ScrollToTop />
       <Navbar />
+
       <Switch>
         <Route exact path="/" component={Home} />
+
+        {/* About */}
         <Route path="/about" component={About} />
+        <Route path="/process" component={Process} />
+        <Route path="/principles" component={Principles} />
+
+        {/* Shop */}
         <Route path="/shop" component={Shop} />
+
+        {/* Events */}
         <Route path="/events" component={Events} />
+
+        {/* Blog */}
         <Route path="/blog" component={Blog} />
+
+        {/* Contact */}
         <Route path="/contact" component={Contact} />
       </Switch>
 

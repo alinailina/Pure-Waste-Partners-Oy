@@ -16,24 +16,22 @@ const Footer = () => {
                   {" "}
                   <span>
                     {" "}
-                    <img src={require("../assets/svgs/linkedin.svg")} alt="" />
+                    <img
+                      src={require("../assets/svgs/linkedin-circled.svg")}
+                      alt=""
+                    />
                   </span>
                 </a>{" "}
-              </li>
-              <li>
-                <a href="/">
-                  <span>
-                    {" "}
-                    <img src={require("../assets/svgs/vk.svg")} alt="" />
-                  </span>
-                </a>
               </li>
               <li>
                 <a href="/">
                   {" "}
                   <span>
                     {" "}
-                    <img src={require("../assets/svgs/fb.svg")} alt="" />
+                    <img
+                      src={require("../assets/svgs/facebook-circled.svg")}
+                      alt=""
+                    />
                   </span>
                 </a>
               </li>
@@ -41,7 +39,22 @@ const Footer = () => {
                 <a href="/">
                   <span>
                     {" "}
-                    <img src={require("../assets/svgs/ig.svg")} alt="" />
+                    <img
+                      src={require("../assets/svgs/medium-circled.svg")}
+                      alt=""
+                    />
+                  </span>
+                </a>
+              </li>
+
+              <li>
+                <a href="/">
+                  <span>
+                    {" "}
+                    <img
+                      src={require("../assets/svgs/instagram-circled.svg")}
+                      alt=""
+                    />
                   </span>
                 </a>
               </li>
@@ -56,7 +69,7 @@ const Footer = () => {
           </div>
         </form>
       </div>
-      <p className="copyright">© - FabRevizion, 2020.</p>
+      <p className="copyright">© FabRevizion, 2020.</p>
     </footer>
   );
 };

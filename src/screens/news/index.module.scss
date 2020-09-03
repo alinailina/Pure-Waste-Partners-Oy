@@ -1,7 +1,7 @@
 @import "../../index.scss";
 
 .container {
-  @include child-container;
+  @include container;
   margin-bottom: 100px;
   @include phone {
     margin-bottom: 50px;

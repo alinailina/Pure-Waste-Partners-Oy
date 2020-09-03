@@ -1,10 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000" viewBox="0 0 1000 1000">
-  <g id="Group_108" data-name="Group 108" transform="translate(-305 -3686)">
-    <rect id="Rectangle_47" data-name="Rectangle 47" width="1000" height="1000" transform="translate(305 3686)" fill="none"/>
-    <g id="linkedin" transform="translate(487 3882.668)">
-      <path id="Path_106" data-name="Path 106" d="M77.613-.668C30.684-.668,0,30.148,0,70.652c0,39.609,29.77,71.3,75.813,71.3H76.7c47.848,0,77.625-31.7,77.625-71.3-.895-40.5-29.777-71.32-76.715-71.32Zm0,0" fill="#e7d8c9"/>
-      <path id="Path_107" data-name="Path 107" d="M8.109,198.313H145.3V611.07H8.109Zm0,0" transform="translate(0 -4.28)" fill="#e7d8c9"/>
-      <path id="Path_108" data-name="Path 108" d="M482.055,188.625c-74.012,0-123.641,69.547-123.641,69.547V198.313h-137.2V611.07H358.406V380.57c0-12.34.895-24.66,4.52-33.484,9.918-24.641,32.488-50.168,70.391-50.168,49.645,0,69.5,37.852,69.5,93.34V611.07H640V374.4C640,247.621,572.313,188.625,482.055,188.625Zm0,0" transform="translate(-4.478 -4.28)" fill="#e7d8c9"/>
-    </g>
+  <g id="Group_1" data-name="Group 1" transform="translate(1513 -6323)">
+    <rect id="Rectangle_2" data-name="Rectangle 2" width="1000" height="1000" transform="translate(-1513 6323)" fill="none"/>
+    <path id="Path_106" data-name="Path 106" d="M77.613-.668C30.684-.668,0,30.148,0,70.652c0,39.609,29.77,71.3,75.813,71.3H76.7c47.848,0,77.625-31.7,77.625-71.3-.9-40.5-29.777-71.32-76.715-71.32Zm0,0" transform="translate(-1298 6473.668)" fill="#e7d8c9"/>
+    <path id="Path_107" data-name="Path 107" d="M8.109,198.313H145.3V611.07H8.109Zm0,0" transform="translate(-1298 6469.388)" fill="#e7d8c9"/>
+    <path id="Path_108" data-name="Path 108" d="M482.055,188.625c-74.012,0-123.641,69.547-123.641,69.547V198.313h-137.2V611.07H358.406V380.57c0-12.34.895-24.66,4.52-33.484,9.918-24.641,32.488-50.168,70.391-50.168,49.645,0,69.5,37.852,69.5,93.34V611.07H640V374.4C640,247.621,572.313,188.625,482.055,188.625Zm0,0" transform="translate(-1302.478 6469.388)" fill="#e7d8c9"/>
   </g>
 </svg>

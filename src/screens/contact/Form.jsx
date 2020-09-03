@@ -14,6 +14,7 @@ const Form = () => {
         <label>
           Email:
           <input type="email" name="email" required />
+          <p>Адрес вашей электронной почты</p>
         </label>
       </div>
 

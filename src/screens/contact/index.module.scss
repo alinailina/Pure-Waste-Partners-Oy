@@ -1,7 +1,7 @@
 @import "../../index.scss";
 
 .container {
-  @include child-container;
+  @include container;
   margin-bottom: 100px;
 
   @include phone {
@@ -64,7 +64,6 @@
     }
 
     form {
-      max-width: 50em;
       display: flex;
       flex-direction: column;
 
@@ -108,7 +107,7 @@
         textarea {
           @include text;
           border: none;
-          padding: 10px 2px;
+          padding: 10px 5px;
           border: 1px solid $black;
           background-color: inherit;
           outline: none;
@@ -143,7 +142,18 @@
       padding: 0;
     }
 
+    > h3 {
+      @include heading;
+      margin: 25px 0;
+
+      @include phone {
+        margin: 0;
+      }
+    }
+
     ul {
+      list-style-type: none;
+      padding: 0;
       display: flex;
       justify-content: space-between;
       max-width: 60em;

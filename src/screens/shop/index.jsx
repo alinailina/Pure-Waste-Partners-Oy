@@ -31,49 +31,49 @@ const Shop = () => {
           <div>
             <img src={require("../../assets/uniforms/2.jpg")} alt="" />
             <div>
-              <h4>Сделать заказ</h4>
+              <h4>Информация о товаре</h4>
             </div>
           </div>
           <div>
             <img src={require("../../assets/uniforms/3.jpg")} alt="" />
             <div>
-              <h4>Сделать заказ</h4>
+              <h4>Информация о товаре</h4>
             </div>
           </div>
           <div>
             <img src={require("../../assets/uniforms/4.jpg")} alt="" />
             <div>
-              <h4>Сделать заказ</h4>
+              <h4>Информация о товаре</h4>
             </div>
           </div>
           <div>
             <img src={require("../../assets/uniforms/5.jpg")} alt="" />
             <div>
-              <h4>Сделать заказ</h4>
+              <h4>Информация о товаре</h4>
             </div>
           </div>
           <div>
             <img src={require("../../assets/uniforms/6.jpg")} alt="" />
             <div>
-              <h4>Сделать заказ</h4>
+              <h4>Информация о товаре</h4>
             </div>
           </div>
           <div>
             <img src={require("../../assets/uniforms/7.jpg")} alt="" />
             <div>
-              <h4>Сделать заказ</h4>
+              <h4>Информация о товаре</h4>
             </div>
           </div>
           <div>
             <img src={require("../../assets/uniforms/8.jpg")} alt="" />
             <div>
-              <h4>Сделать заказ</h4>
+              <h4>Информация о товаре</h4>
             </div>
           </div>
           <div>
             <img src={require("../../assets/uniforms/9.jpg")} alt="" />
             <div>
-              <h4>Сделать заказ</h4>
+              <h4>Информация о товаре</h4>
             </div>
           </div>
           <i aria-hidden={true}></i>

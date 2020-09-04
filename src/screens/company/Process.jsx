@@ -72,7 +72,7 @@ const Process = () => {
           <div>
             {" "}
             <div>
-              <img src={require("../../assets/svgs/step4.svg")} alt="" />
+              <img src={require("../../assets/svgs/step5.svg")} alt="" />
             </div>
             <div>
               <p>
@@ -90,7 +90,7 @@ const Process = () => {
         <li>
           <div>
             <div>
-              <img src={require("../../assets/svgs/step5.svg")} alt="" />
+              <img src={require("../../assets/svgs/step4.svg")} alt="" />
             </div>
             <div>
               <p>

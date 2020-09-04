@@ -109,6 +109,12 @@
         //border: 1px solid;
         width: 100%;
 
+        &:first-of-type {
+          div {
+            width: 90%;
+          }
+        }
+
         img {
           margin-top: 80px;
           margin-bottom: -10px;

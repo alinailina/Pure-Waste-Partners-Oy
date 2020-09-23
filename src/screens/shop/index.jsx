@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./index.module.scss";
+import List from "./List";
 
 // Components
 import Header from "../../components/Header";
@@ -14,8 +15,8 @@ const Shop = () => {
           заказать у нас предметы униформы, представленные в галерее ниже.{" "}
         </p>
         <p>
-          Все изделия выполнены из вторичных материалов, обработанных и отшитых
-          по методу{" "}
+          Все предметы униформы изготовлены из списанного постельного белья из
+          отелей. Текстиль был обработан по методу{" "}
           <a
             href="https://taukodesign.com/"
             target="_blank"
@@ -23,63 +24,10 @@ const Shop = () => {
           >
             TAUKO design
           </a>
-          .
+          . Все изделия были отшиты по моделям TAUKO в Санкт-Петербурге.
         </p>
       </section>
-      <section>
-        <div>
-          <div>
-            <img src={require("../../assets/uniforms/2.jpg")} alt="" />
-            <div>
-              <h4>Информация о товаре</h4>
-            </div>
-          </div>
-          <div>
-            <img src={require("../../assets/uniforms/3.jpg")} alt="" />
-            <div>
-              <h4>Информация о товаре</h4>
-            </div>
-          </div>
-          <div>
-            <img src={require("../../assets/uniforms/4.jpg")} alt="" />
-            <div>
-              <h4>Информация о товаре</h4>
-            </div>
-          </div>
-          <div>
-            <img src={require("../../assets/uniforms/5.jpg")} alt="" />
-            <div>
-              <h4>Информация о товаре</h4>
-            </div>
-          </div>
-          <div>
-            <img src={require("../../assets/uniforms/6.jpg")} alt="" />
-            <div>
-              <h4>Информация о товаре</h4>
-            </div>
-          </div>
-          <div>
-            <img src={require("../../assets/uniforms/7.jpg")} alt="" />
-            <div>
-              <h4>Информация о товаре</h4>
-            </div>
-          </div>
-          <div>
-            <img src={require("../../assets/uniforms/8.jpg")} alt="" />
-            <div>
-              <h4>Информация о товаре</h4>
-            </div>
-          </div>
-          <div>
-            <img src={require("../../assets/uniforms/9.jpg")} alt="" />
-            <div>
-              <h4>Информация о товаре</h4>
-            </div>
-          </div>
-          <i aria-hidden={true}></i>
-          <i aria-hidden={true}></i>
-        </div>
-      </section>
+      <List />
     </div>
   );
 };

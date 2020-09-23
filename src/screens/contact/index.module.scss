@@ -25,7 +25,8 @@
 
       span {
         display: block;
-        color: gray;
+        @include small-text;
+
         margin-bottom: 25px;
       }
     }
@@ -56,7 +57,7 @@
   > section:nth-of-type(2) {
     > h3 {
       @include heading;
-      margin: 25px 0;
+      margin: 50px 0 25px;
 
       @include phone {
         margin: 0;
@@ -87,7 +88,7 @@
         //border: 1px solid red;
         display: flex;
         flex-direction: column;
-        @include text;
+        @include small-text;
 
         p {
           font-size: 0.8em;
@@ -95,7 +96,7 @@
             @include link;
           }
         }
-        color: gray;
+
         margin: 15px 0;
         margin-bottom: 25px;
 
@@ -156,10 +157,10 @@
       padding: 0;
       display: flex;
       justify-content: space-between;
-      max-width: 60em;
+      max-width: 50em;
 
       li {
-        width: 25%;
+        width: 35%;
       }
     }
   }

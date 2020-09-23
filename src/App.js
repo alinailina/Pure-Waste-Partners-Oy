@@ -21,7 +21,8 @@ import Shop from "./screens/shop";
 import Events from "./screens/events";
 
 // Blog
-import Blog from "./screens/news";
+import News from "./screens/news/index";
+import FullPost from "./screens/news/FullPost";
 
 // Contact
 import Contact from "./screens/contact";
@@ -47,8 +48,8 @@ function App() {
         <Route path="/events" component={Events} />
 
         {/* Blog */}
-        <Route path="/blog" component={Blog} />
-
+        <Route path="/news" component={News} />
+        <Route path="/fullpost" component={FullPost} />
         {/* Contact */}
         <Route path="/contact" component={Contact} />
       </Switch>

@@ -13,24 +13,10 @@ const Footer = () => {
             <ul>
               <li>
                 <a href="/">
-                  {" "}
                   <span>
-                    {" "}
                     <img
-                      src={require("../assets/svgs/linkedin-circled.svg")}
-                      alt=""
-                    />
-                  </span>
-                </a>{" "}
-              </li>
-              <li>
-                <a href="/">
-                  {" "}
-                  <span>
-                    {" "}
-                    <img
-                      src={require("../assets/svgs/facebook-circled.svg")}
-                      alt=""
+                      src={require("../assets/svgs/linkedin-white.svg")}
+                      alt="linkedin-icon"
                     />
                   </span>
                 </a>
@@ -38,22 +24,19 @@ const Footer = () => {
               <li>
                 <a href="/">
                   <span>
-                    {" "}
                     <img
-                      src={require("../assets/svgs/medium-circled.svg")}
-                      alt=""
+                      src={require("../assets/svgs/facebook-white.svg")}
+                      alt="facebook-icon"
                     />
                   </span>
                 </a>
               </li>
-
               <li>
                 <a href="/">
                   <span>
-                    {" "}
                     <img
-                      src={require("../assets/svgs/instagram-circled.svg")}
-                      alt=""
+                      src={require("../assets/svgs/instagram-white.svg")}
+                      alt="instagram-icon"
                     />
                   </span>
                 </a>

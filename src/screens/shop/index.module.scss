@@ -8,7 +8,7 @@
   }
 
   // Intro text
-  section:first-of-type {
+  section {
     @include child-container;
     margin-bottom: 50px;
     p {
@@ -19,58 +19,111 @@
       }
     }
   }
+}
 
-  // Photos
-  section:nth-of-type(2) {
-    background-color: $linen;
-    padding: 100px 0 50px;
-    // Inner flex container
-    > div {
-      @include child-container;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
+.item {
+  // Контакты
+  a {
+    text-decoration: none;
+    width: 200px;
+    @include text;
+    text-align: center;
 
-      // Flex item
-      > div,
-      i {
-        width: 22%;
-        @include phone {
-          width: 45%;
-        }
-        margin-bottom: 50px;
-        position: relative;
+    @include desktop {
+      min-width: 200px;
+      width: 10vw;
+    }
+
+    border-radius: 2px;
+    padding: 8px 0;
+    background-color: $black;
+
+    transition: all 0.25s ease;
+    cursor: pointer;
+    outline: none;
+
+    background-color: none;
+    border: 1px solid $black;
+    color: white;
+
+    &:hover {
+      background-color: transparent;
+      border: 1px solid $black;
+      color: $black;
+    }
+  }
+}
+
+.list {
+  background-color: $linen;
+  padding: 50px 0 0;
+
+  // Inner flex container
+  > div {
+    @include child-container;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    // Flex item
+    > div,
+    i {
+      width: 22%;
+
+      @include phone {
+        width: 45%;
+      }
+      @include tablet {
+        width: 30%;
+      }
+      margin-bottom: 25px;
+
+      img {
         cursor: pointer;
+      }
 
-        > img {
-          opacity: 1;
-          backface-visibility: hidden;
-          transition: 0.5s ease;
+      > div {
+        //border: 1px solid red;
+
+        p {
+          padding: 0;
+          margin: 5px 0;
+          // @include text;
+          // A bit smaller font-size
+          font-size: 1rem;
+          line-height: 1.5;
+
+          @include tablet {
+            font-size: 1rem;
+          }
+
+          @include desktop {
+            font-size: 1.25vw;
+          }
         }
 
-        > div {
-          transition: 0.5s ease;
-          opacity: 0;
+        // Заказать
+        a {
+          text-decoration: none;
+          display: block;
+          width: 100%;
+          @include text;
           text-align: center;
+          color: $black;
+          padding: 8px 0;
+          background-color: none;
+          border: 1px solid $black;
+          border-radius: 2px;
+          transition: all 0.25s ease;
+          cursor: pointer;
+          outline: none;
 
-          h4 {
-            @include text;
+          &:hover {
+            background-color: $black;
+            border: 1px solid $black;
             color: white;
-            position: absolute;
-            top: 40%;
-            left: 50%;
-            transform: translate(-50%, -50%);
           }
-        }
-
-        &:hover {
-          img {
-            opacity: 0.5;
-          }
-
-          > div {
-            opacity: 1;
-          }
+          margin: 10px 0;
         }
       }
     }

@@ -66,7 +66,7 @@ const Navbar = () => {
         </li>
         <li>
           <NavLink
-            to="blog"
+            to="news"
             onClick={toggleActive}
             activeClassName="navlink-active"
           >

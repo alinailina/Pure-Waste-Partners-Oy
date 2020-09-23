@@ -35,7 +35,7 @@ const Contact = () => {
               <span>
                 <img
                   src={require("../../assets/svgs/linkedin.svg")}
-                  alt="linkedin"
+                  alt="linkedin-icon"
                 />
               </span>
             </a>
@@ -45,27 +45,18 @@ const Contact = () => {
               <span>
                 <img
                   src={require("../../assets/svgs/facebook.svg")}
-                  alt="facebook"
+                  alt="facebook-icon"
                 />
               </span>
             </a>
           </li>
-          <li>
-            <a href="/">
-              <span>
-                <img
-                  src={require("../../assets/svgs/medium.svg")}
-                  alt="medium"
-                />
-              </span>
-            </a>
-          </li>
+
           <li>
             <a href="/">
               <span>
                 <img
                   src={require("../../assets/svgs/instagram.svg")}
-                  alt="instagram"
+                  alt="instagram-icon"
                 />
               </span>
             </a>

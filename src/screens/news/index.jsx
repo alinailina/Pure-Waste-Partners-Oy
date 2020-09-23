@@ -1,25 +1,30 @@
-import React from "react";
-//import { Link } from "react-router-dom";
-// Styles
+import React, { useState, useEffect } from "react";
+import Posts from "./Posts";
+import Header from "../../components/Header";
 import styles from "./index.module.scss";
 
-// Components
-import Header from "../../components/Header";
-import Article from "./Article";
+const contentful = require("contentful");
+const client = contentful.createClient({
+  space: process.env.REACT_APP_SPACE,
+  accessToken: process.env.REACT_APP_ACCESS_TOKEN,
+});
 
-const Blog = () => {
+const News = () => {
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    client
+      .getEntries()
+      .then((response) => setPosts(response.items))
+      .catch(console.error);
+  }, []);
+
   return (
     <div className={styles.container}>
       <Header title="Новости" />
-      <div>
-        <Article />
-        <Article />
-        <Article />
-        <i aria-hidden={true}></i>
-        <i aria-hidden={true}></i>
-      </div>
+      <Posts posts={posts} />
     </div>
   );
 };
 
-export default Blog;
+export default News;
